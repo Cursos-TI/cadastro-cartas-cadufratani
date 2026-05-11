@@ -32,7 +32,7 @@ int main() {
 
   // Área para entrada de dados
   // carta1
-  printf("CADASTRO DA CARTA 1\n\n");
+  printf("\n\nCADASTRO DA CARTA 1\n\n");
 
   printf("Digite o estado (A-H): \n");
   scanf(" %c", &estado1);
@@ -56,7 +56,7 @@ int main() {
   scanf("%d", &pontosturisticos1);
 
   // carta 2
-  printf("CADASTRO DA CARTA 2\n\n");
+  printf("\n\nCADASTRO DA CARTA 2\n\n");
 
   printf("Digite o estado (A-H): \n");
   scanf(" %c", &estado2);
@@ -91,7 +91,7 @@ int main() {
 
   // Área para exibição dos dados da cidade
   // carta1
-  printf("\n\nCARTA 1:\n");
+  printf("\n\nCARTA 1\n");
   printf("Estado: %c\n", estado1);
   printf("Codigo: %s\n", codigo1);
   printf("Nome da Cidade: %s\n", cidade1);
@@ -103,7 +103,7 @@ int main() {
   printf("PIB per capta: %.2f \n", pibpercapta1);
 
   // carta2
-  printf("\n\nCARTA 2:\n");
+  printf("\n\nCARTA 2\n");
   printf("Estado: %c\n", estado2);
   printf("Codigo: %s\n", codigo2);
   printf("Nome da Cidade: %s\n", cidade2);
@@ -114,18 +114,30 @@ int main() {
   printf("Densidade Populacional: %.2f hab/km\n", densidade2);
   printf("PIB per capta: %.2f \n", pibpercapta2);
 
-  printf("\nCOMPARACAO DE CARTAS:\n");
-  printf("Populacao: Carta 1 venceu (%d)\n", populacao1 > populacao2);
-  printf("Area: Carta 1 venceu (%d)\n", area1 > area2);
-  printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
-  printf("Pontos Turisticos: Carta 1 venceu (%d)\n", pontosturisticos1 > pontosturisticos2);
+    // =========================
+    // COMPARACAO
+    // ATRIBUTO ESCOLHIDO:
+    // POPULACAO
+    // =========================
 
-  // REGRA ESPECIAL
-  printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade1 < densidade2);
-  printf("PIB per Capita: Carta 1 venceu (%d)\n", pibpercapta1 > pibpercapta2);
-  printf("Super Poder: Carta 1 venceu (%d)\n", superpoder1 > superpoder2);
+    printf("\n\n===== COMPARACAO DE CARTAS =====\n");
+
+    printf("Atributo escolhido: POPULAÇÃO\n\n");
+
+    printf("Carta 1 - %s: %d\n", cidade1, populacao1);
+    printf("Carta 2 - %s: %d\n", cidade2, populacao2);
+
+    // REGRA:
+    // MAIOR POPULACAO VENCE
+
+    if (populacao1 > populacao2) {
+        printf("\nResultado: Carta 1 (%s) venceu!\n", cidade1);
+    } else (populacao1 < populacao2) {
+        printf("\nResultado: Carta 2 (%s) venceu!\n", cidade2);
+    } 
 
 
 
 return 0;
+
 } 
